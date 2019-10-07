@@ -1,0 +1,23 @@
+.villageList {
+  padding: 20px;
+  border: 5px solid #aaeab6;
+  background: url('imgs/green.jpg') no-repeat;
+  background-size: cover;
+}
+.villageList h2 {
+  margin-top: 0;
+  text-align: left;
+}
+.villageList ol {
+  padding-left: 10%;
+  margin-top: 0;
+}
+.villageList li {
+  text-align: left;
+  margin-bottom: 5px;
+}
+@media(max-width: 767px){
+  .villageList ol {
+    padding-left: 20%;
+  }
+}

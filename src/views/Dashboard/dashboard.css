@@ -1,0 +1,58 @@
+.dashboard {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 26.6% 40% 31.33%;
+  grid-template-rows: 70% 30%;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: calc(100% - 40px);
+  width: calc(100% - 40px);
+  transform: translate(-50%, -50%);
+}
+.village,
+.status,
+.graveyard {
+    position: relative;
+}
+.village {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.status {
+    grid-column: 1 ;
+    grid-row: 2 ;
+}
+.villageList {
+    grid-column: 2;
+    grid-row: 2;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 50vh;
+}
+.graveyard {
+    grid-column: 3;
+    grid-row: 1 / 2;
+}
+.graveyardList {
+    grid-column: 3 ;
+    grid-row: 2;
+}
+
+@media(max-width: 767px){
+    .dashboard {
+        position: relative;
+        display: block;
+        width: 100%;
+        left: unset;
+        transform: unset;
+        -webkit-transform: unset;
+        -moz-transform: unset;
+        -ms-transform: unset;
+        -o-transform: unset;
+    }
+    .dashboard > div {
+        margin-bottom: 20px;
+    }
+}

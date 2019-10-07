@@ -1,0 +1,27 @@
+.graveyardList {
+  border: 6px solid #000;
+  background: url('imgs/brown.jpg') no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  overflow-y: scroll;
+  color: #fff;
+  padding: 20px;
+}
+.graveyardList h2,
+.graveyardList h3 {
+  text-align: left;
+}
+.graveyardList h2 {
+  margin-top: 0;
+}
+.graveyardList h3 {
+  margin-left: 2%;
+}
+.graveyardList ol {
+  padding-left: 15%;
+  margin-top: 0;
+}
+.graveyardList li {
+  text-align: left;
+  margin-bottom: 5px;
+}

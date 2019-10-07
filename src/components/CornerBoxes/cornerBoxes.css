@@ -1,0 +1,23 @@
+.square {
+  width: 10px;
+  height: 10px;
+  border: 3px solid #aaeab6;
+  position: absolute;
+  /* z-index: 1; */
+}
+.square-1 {
+  top: -7px;
+  left: -7px;
+}
+.square-2 {
+  top: -7px;
+  right: -7px;
+}
+.square-3 {
+  bottom: -7px;
+  left: -7px;
+}
+.square-4 {
+  bottom: -7px;
+  right: -7px;
+}

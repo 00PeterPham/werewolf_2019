@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+
+
+# production
+build
+
+# config
+config/db_settings.js
+
+# misc
+.cache
+.DS_Store
+.env
+.env.tv
+npm-debug.log
+.idea
+super_secret_creds___REMOVE.txt
+.htaccess

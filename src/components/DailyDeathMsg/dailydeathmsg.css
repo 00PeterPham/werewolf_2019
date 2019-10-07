@@ -1,0 +1,54 @@
+.daily-death-msg {
+  position: fixed;
+  top: -100%;
+  right: -100%;
+  bottom: -100%;
+  left: -100%;
+  background-color: rgba(0,0,0,0.9);
+  color: #fff;
+  z-index: 0;
+  opacity: 0;
+  animation-name: fadeOut;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+.daily-death-msg__close-x {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 2vw;
+  cursor: pointer;
+}
+.daily-death-msg__day {
+  margin-bottom: 20px;
+}
+.daily-death-msg__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  font-size: 2.5vw;
+  text-transform: uppercase;
+}
+.daily-death-msg__container {
+  margin-bottom: 20px;
+}
+.daily-death-msg__deadPerson {
+  color: #df0000;
+}
+.daily-death-msg__deadRole {
+  color: yellowgreen;
+}
+
+@keyframes fadeOut {
+  0% { opacity:1; z-index: 5 }
+  50% { opacity: 1 }
+  80% { opacity: 0 }
+  100% { z-index: 0 }
+}

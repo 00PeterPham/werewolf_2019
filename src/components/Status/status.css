@@ -1,0 +1,28 @@
+.status {
+  background: url('imgs/yellow.jpg') no-repeat;
+  background-size: cover;
+  border: 5px solid #f9d53d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+}
+.status__day {
+  font-size: 2vw;
+  margin-bottom: 20px;
+}
+.status__alive,
+.status__deceased {
+  font-size: 1.5vw;
+  margin-bottom: 5px;
+}
+@media(max-width: 767px){
+  .status__day {
+    font-size: 10vw;
+  }
+  .status__alive,
+  .status__deceased {
+    font-size: 6vw;
+  }
+}

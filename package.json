@@ -1,0 +1,54 @@
+{
+  "homepage": ".",
+  "name": "werewolf-game",
+  "version": "1.0.0",
+  "description": "HackerYou Fullstack Masterclass Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "react-scripts test",
+    "start:server": "nodemon api/server.js --ignore client",
+    "start:client": "react-scripts start",
+    "build:client": "react-scripts build",
+    "build:tv": "env-cmd -f .env.tv react-scripts build",
+    "git:remote:set": "git remote set-url origin https://github.com/00PeterPham/werewolf_game.git",
+    "git:remote:create": "git remote add origin https://github.com/00PeterPham/werewolf_game.git"
+  },
+  "proxy": "http://localhost:8080",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/00PeterPham/werewolf_game.git"
+  },
+  "keywords": [],
+  "author": "Peter Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HackerYou/con-ed-full-stack/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "init-package-json": "^1.10.3",
+    "mongoose": "^5.6.11",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^1.19.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^3.1.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "semistandard": {
+    "ignore": [
+      "build/**"
+    ]
+  },
+  "devDependencies": {
+    "env-cmd": "^10.0.1"
+  }
+}

@@ -1,0 +1,96 @@
+.graveyard {
+  border: 6px solid #000;
+  background-color: #4c3939;
+}
+.tombStone__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  /* height: 100%; */
+  /* justify-content: space-around; */
+  padding: 20px;
+}
+.tombStone {
+  background: url('imgs/tombStone.svg') no-repeat;
+  background-size: 100% 80%;
+  width: 7.6%;
+  margin: 0.5% 3%;
+  position: relative;
+  visibility: hidden;
+  padding-bottom: 12%;
+}
+.tombStone.show {
+  visibility: visible;
+}
+.tombStone polygon {
+  fill: #999;
+}
+.tombStone.auraseer {
+  background-image: url('imgs/tombStone-auraseer.png')
+}
+.tombStone.bodyguard {
+  background-image: url('imgs/tombStone-bodyguard.png')
+}
+.tombStone.hunter {
+  background-image: url('imgs/tombStone-hunter.png')
+}
+.tombStone.seer {
+  background-image: url('imgs/tombStone-seer.png')
+}
+.tombStone.sorceress {
+  background-image: url('imgs/tombStone-sorceress.png')
+}
+.tombStone.werewolf {
+  background-image: url('imgs/tombStone-werewolf.png')
+}
+.tombStone:hover .tombStone__info {
+  display: block;
+}
+.tombStone__info {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  z-index: 1;
+  background-color: #000;
+  border: 5px solid #df0000;
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  font-size: 1vw;
+}
+.tombStone__info > div {
+  white-space: nowrap;
+}
+.tombStone__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75vw;
+}
+@media(max-width: 767px){
+  .tombStone__container {
+    height: unset;
+    min-height: 400px;
+  }
+  .tombStone__info {
+    position: fixed;
+    right: unset;
+    left: 50%;
+    font-size: 4vw;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+  .tombStone__name {
+    font-size: 2vw;
+  }
+}
