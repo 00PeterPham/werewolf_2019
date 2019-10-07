@@ -13,7 +13,7 @@ To begin using this repository please run the following command.
 Death: jane.doe was a villager
 Resurrection: jane.doe
 
-3. MongoDB
+3. MongoDB - create a database and remember the name. You will need the database name in the db_settings.js file.
 
 ## Required Files
 1. .env - you will need to create a .env file on your root and add the following code (they do NOT need to be strings or in quotes " "): ie. REACT_APP_API_KEY=xxx-1234 --> GOOD
@@ -24,6 +24,8 @@ REACT_APP_DEATH_CHANNEL_KEY=<ADD YOUR DEATH SLACK CHANNEL ID HERE>
 2. db_settings.js - you will need to create this file in config/ (in the same folder as init_database.js) and add the following code (these values DO need to be in quotes " "):
 
 module.exports = {
+  "db_name": "<ADD NAME OF DATABASE>",
+  "db_collection_name": "<ADD NAME OF DATABASE COLLECTION>",
   "api_key": "<ADD SLACK API KEY HERE>",
   "werewolf_channel_id": "<ADD YOUR MAIN SLACK CHANNEL ID HERE>",
   "exclusionListArray": [
@@ -39,6 +41,13 @@ REACT_APP_API_KEY=<ADD YOUR SLACK API KEY HERE>
 REACT_APP_DEATH_CHANNEL_KEY=<ADD YOUR DEATH SLACK CHANNEL ID HERE>
 REACT_APP_TV=true
 
+## Populate DB - users collection
+
+1. Double Check - make sure that a database has been created and the name was set in the db_setting.js file. Also, make sure that the "db_collection_name" has been set in the db_setting.js file. The DB doesn't need to have this collection in it yet. The collection will be created once we run the below script.
+
+2. Populate collection - From the terminal navigate to the root of your project folder and run the following command: 
+
+node config/init_database.js
 
 ## Usage
 

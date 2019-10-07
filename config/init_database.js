@@ -6,7 +6,7 @@ console.log('DB RUNNING');
 
 const { MongoClient } = require('mongodb');
 const url = 'mongodb://localhost:27017';
-const dbname = 'werewolf_game';
+const dbname = db_settings.db_name;
 const fetch = require("node-fetch");
 
 //-- INITIALIZE DB with members from werewolf-2019 channel --
@@ -157,9 +157,9 @@ MongoClient.connect(url, { useNewUrlParser: true }, async (err, client) => {
   }
 
   const db = client.db(dbname);
-  const collection = db.collection('users');
+  const collection = db.collection(db_settings.db_collection_name);
 
-  db.listCollections({name: 'users'}) //Drops the 'user' collection if exists, then inserts new user data
+  db.listCollections({name: db_settings.db_collection_name}) //Drops the collection if exists, then inserts new user data
     .next(async (err, collinfo) => {
         if (collinfo) {
             await collection.drop();
